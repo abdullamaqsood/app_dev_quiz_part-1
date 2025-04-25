@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class TransactionModel {
   final String title;
   final double amount;
@@ -13,7 +15,7 @@ class TransactionModel {
     return TransactionModel(
       title: data['title'],
       amount: (data['amount'] as num).toDouble(),
-      date: DateTime.parse(data['date']),
+      date: (data['date'] as Timestamp).toDate(),
     );
   }
 }
