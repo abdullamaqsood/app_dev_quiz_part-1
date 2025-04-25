@@ -49,7 +49,7 @@ class TransactionTile extends StatelessWidget {
       title: Text(tx.title, style: TextStyle(fontWeight: FontWeight.bold)),
       subtitle: Text(formatDate(tx.date)),
       trailing: Text(
-        '${isIncome ? '+' : ''}\$${tx.amount.abs()}',
+        '${isIncome ? '+' : '-'}\$${tx.amount.abs()}',
         style: TextStyle(
           color: isIncome ? Colors.blue : Colors.red,
           fontWeight: FontWeight.bold,
